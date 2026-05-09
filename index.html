@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>Namisha &amp; Yashutosh — A Wedding in Sirsa</title>
+<meta name="description" content="Two hearts. One forever. Namisha Goyal weds Yashutosh Bansal — Sirsa, November 2026" />
+<meta name="theme-color" content="#1a0d12" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Italiana&family=Cinzel:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Great+Vibes&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========== LOADER ========== -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-monogram">N <span class="amp">&amp;</span> Y</div>
+    <div class="loader-line"></div>
+    <div class="loader-text">A LOVE STORY UNFOLDS</div>
+  </div>
+</div>
+
+<!-- ========== SVG FILTER DEFINITIONS — painterly effects ========== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- Painterly filter (oil-paint feel) -->
+    <filter id="painterly" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur stdDeviation=".7" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="
+        1.05 0 0 0 0
+        0 1.05 0 0 0
+        0 0 1.05 0 0
+        0 0 0 1 0"/>
+    </filter>
+    <!-- Soft dreamy filter -->
+    <filter id="dreamy" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation=".5"/>
+      <feComponentTransfer>
+        <feFuncR type="gamma" amplitude="1.05" exponent=".95"/>
+        <feFuncG type="gamma" amplitude="1.05" exponent=".95"/>
+        <feFuncB type="gamma" amplitude="1.1" exponent=".9"/>
+      </feComponentTransfer>
+    </filter>
+    <!-- Posterized -->
+    <filter id="poster">
+      <feComponentTransfer>
+        <feFuncR type="discrete" tableValues="0 .15 .3 .5 .7 .85 1"/>
+        <feFuncG type="discrete" tableValues="0 .15 .3 .5 .7 .85 1"/>
+        <feFuncB type="discrete" tableValues="0 .15 .3 .5 .7 .85 1"/>
+      </feComponentTransfer>
+    </filter>
+    <!-- Grain texture -->
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2"/>
+      <feColorMatrix values="0 0 0 0 .3   0 0 0 0 .2   0 0 0 0 .1   0 0 0 .15 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+      <feComposite in2="SourceGraphic" operator="over"/>
+    </filter>
+  </defs>
+</svg>
+
+<!-- ========== SPARKLE PARTICLES ========== -->
+<div class="sparkles" id="sparkles" aria-hidden="true"></div>
+
+<!-- ========== NAV ========== -->
+<nav id="nav">
+  <a href="#top" class="logo">Namisha <span class="amp">&amp;</span> Yashutosh</a>
+  <ul id="menu">
+    <li><a href="#story">Story</a></li>
+    <li><a href="#sangeet">Sangeet</a></li>
+    <li><a href="#haldi">Haldi</a></li>
+    <li><a href="#wedding">Wedding</a></li>
+    <li><a href="#gallery">Memories</a></li>
+    <li><a href="#rsvp" class="rsvp-mini">RSVP</a></li>
+  </ul>
+  <div class="nav-controls">
+    <button class="sound-btn" id="soundBtn" aria-label="Toggle music">
+      <svg id="soundOff" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M11 5L6 9H2v6h4l5 4V5zM23 9l-6 6M17 9l6 6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <svg id="soundOn" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M11 5L6 9H2v6h4l5 4V5z" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15.54 8.46a5 5 0 010 7.07M19.07 4.93a10 10 0 010 14.14" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<header class="hero" id="top">
+  <!-- Mandala backdrop -->
+  <div class="hero-mandala" aria-hidden="true">
+    <svg viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
+      <g stroke="#8a6f3f" stroke-width=".8" fill="none">
+        <circle cx="400" cy="400" r="380" stroke-dasharray="2 6"/>
+        <circle cx="400" cy="400" r="320"/>
+        <circle cx="400" cy="400" r="280" stroke-dasharray="4 8"/>
+        <circle cx="400" cy="400" r="220"/>
+        <circle cx="400" cy="400" r="160"/>
+        <g transform="translate(400,400)">
+          <g id="petal-set">
+            <path d="M0 -380 Q40 -300 0 -220 Q-40 -300 0 -380 Z"/>
+            <path d="M0 -340 Q60 -280 0 -240 Q-60 -280 0 -340 Z"/>
+          </g>
+          <use href="#petal-set" transform="rotate(30)"/>
+          <use href="#petal-set" transform="rotate(60)"/>
+          <use href="#petal-set" transform="rotate(90)"/>
+          <use href="#petal-set" transform="rotate(120)"/>
+          <use href="#petal-set" transform="rotate(150)"/>
+          <use href="#petal-set" transform="rotate(180)"/>
+          <use href="#petal-set" transform="rotate(210)"/>
+          <use href="#petal-set" transform="rotate(240)"/>
+          <use href="#petal-set" transform="rotate(270)"/>
+          <use href="#petal-set" transform="rotate(300)"/>
+          <use href="#petal-set" transform="rotate(330)"/>
+        </g>
+      </g>
+    </svg>
+  </div>
+
+  <!-- Floating petals -->
+  <div class="petals" id="petals" aria-hidden="true"></div>
+
+  <div class="hero-inner">
+    <div class="eyebrow">Together with their families</div>
+
+    <div class="hero-ornament">
+      <span class="line"></span>
+      <span class="dot"></span>
+      <svg width="22" height="22" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1">
+        <path d="M16 4 L18 14 L28 16 L18 18 L16 28 L14 18 L4 16 L14 14 Z"/>
+      </svg>
+      <span class="dot"></span>
+      <span class="line"></span>
+    </div>
+
+    <!-- Photo medallions of the couple -->
+    <div class="hero-photos">
+      <div class="photo-medallion">
+        <img src="photos/p3.jpeg" alt="Namisha &amp; Yashutosh" />
+      </div>
+      <div class="heart-pulse">
+        <svg width="38" height="38" viewBox="0 0 32 32" fill="currentColor">
+          <path d="M16 28 C16 28 4 20 4 12 C4 7 8 4 12 6 C14 7 16 9 16 9 C16 9 18 7 20 6 C24 4 28 7 28 12 C28 20 16 28 16 28 Z"/>
+        </svg>
+      </div>
+      <div class="photo-medallion right">
+        <img src="photos/p1.jpeg" alt="Namisha &amp; Yashutosh" />
+      </div>
+    </div>
+
+    <h1 class="display">Namisha <span class="amp">&amp;</span> Yashutosh</h1>
+
+    <p class="tagline">Two hearts. One forever.</p>
+
+    <div class="hero-ornament" style="margin-top:1.5rem">
+      <span class="line"></span>
+      <span style="font-size:.8rem">❋</span>
+      <span class="line"></span>
+    </div>
+
+    <div class="hero-date">24 · 25 NOVEMBER · 2026</div>
+    <div class="hero-place">Sirsa, Haryana</div>
+
+    <div class="countdown" id="countdown">
+      <div class="count-cell"><div class="num" id="d">--</div><div class="lbl">Days</div></div>
+      <div class="count-cell"><div class="num" id="h">--</div><div class="lbl">Hours</div></div>
+      <div class="count-cell"><div class="num" id="m">--</div><div class="lbl">Min</div></div>
+      <div class="count-cell"><div class="num" id="s">--</div><div class="lbl">Sec</div></div>
+    </div>
+  </div>
+
+  <div class="scroll-cue">Scroll</div>
+</header>
+
+<!-- ========== OUR STORY ========== -->
+<section class="story" id="story">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" style="--accent-deep:#8a6f3f">The two of us</div>
+      <h2 class="display shimmer-text">Our Story</h2>
+      <div class="divider" style="--accent:#8a6f3f">
+        <span class="line"></span>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21 C12 21 4 16 4 9 C4 6 6 4 9 4 C10 4 11 5 12 6 C13 5 14 4 15 4 C18 4 20 6 20 9 C20 16 12 21 12 21 Z"/></svg>
+        <span class="line"></span>
+      </div>
+      <p class="desc">Two paths, one destination — written in the stars long before we knew it.</p>
+    </div>
+
+    <div class="story-grid reveal">
+      <div class="story-img-wrap art-frame art-story">
+        <img src="photos/p3.jpeg" alt="Namisha &amp; Yashutosh together" />
+        <div class="art-overlay-warmth"></div>
+        <div class="art-overlay-grain"></div>
+        <span class="corner-deco tl"></span>
+        <span class="corner-deco br"></span>
+      </div>
+      <div class="story-text">
+        <h3>From Strangers to Forever</h3>
+        <p>It started like the best stories do — <em>unexpectedly</em>. A glance, a conversation, and somewhere between the laughter and the long silences, we knew.</p>
+        <p>From sunset beaches to long drives, from shared dreams to shared families — every step has led us here, to this moment, and to the rest of our lives <em>together</em>.</p>
+        <div class="story-meta">
+          <div class="item">
+            <div class="k">First Met</div>
+            <div class="v">Once Upon a Time</div>
+          </div>
+          <div class="item">
+            <div class="k">The Yes</div>
+            <div class="v">Forever &amp; Always</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== EVENT 1: SANGEET (PINK GLAM) ========== -->
+<section class="event-full theme-sangeet" id="sangeet">
+  <div class="event-bg-decor" aria-hidden="true">
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="disco-particles" id="discoParticles"></div>
+  </div>
+
+  <div class="event-grid container">
+    <!-- LEFT: Editorial art treatment -->
+    <div class="event-art reveal">
+      <!-- Layered painterly composition -->
+      <div class="art-stack">
+        <!-- Decorative back layer -->
+        <div class="art-back-shape"></div>
+
+        <!-- Main photo with painterly + pink wash -->
+        <div class="art-frame art-sangeet">
+          <img src="photos/p1.jpeg" alt="Namisha &amp; Yashutosh — Sangeet portrait" />
+          <div class="art-overlay-pink"></div>
+          <div class="art-overlay-shimmer"></div>
+          <div class="art-overlay-grain"></div>
+        </div>
+
+        <!-- Floating sparkle SVG decoration -->
+        <svg class="art-deco-svg art-deco-tr" viewBox="0 0 100 100" aria-hidden="true">
+          <g fill="#c9387b" opacity=".7">
+            <path d="M50 10 L52 45 L85 50 L52 55 L50 90 L48 55 L15 50 L48 45 Z"/>
+          </g>
+        </svg>
+        <svg class="art-deco-svg art-deco-bl" viewBox="0 0 100 100" aria-hidden="true">
+          <g fill="#d4af7a" opacity=".8">
+            <circle cx="50" cy="50" r="3"/>
+            <circle cx="20" cy="20" r="2"/>
+            <circle cx="80" cy="30" r="2.5"/>
+            <circle cx="30" cy="80" r="2"/>
+            <circle cx="75" cy="75" r="3"/>
+          </g>
+        </svg>
+
+        <!-- Editorial label -->
+        <div class="art-label art-label-sangeet">
+          <div class="art-label-num">01</div>
+          <div class="art-label-text">Sangeet<br><span>Glamour</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Editorial copy -->
+    <div class="event-info reveal">
+      <div class="event-day">Day One · 24 November 2026</div>
+      <h2 class="display">Sangeet <br><em class="play-italic">&amp; Engagement</em></h2>
+      <p class="tagline">An evening where music tells our story and rings tell our promise.</p>
+
+      <div class="event-meta-row">
+        <div class="cell"><div class="k">Time</div><div class="v">7:00 PM<br>Onwards</div></div>
+        <div class="cell"><div class="k">Venue</div><div class="v">Ram Bhawan,<br>Sirsa</div></div>
+        <div class="cell"><div class="k">Dress Code</div><div class="v">Pink &amp;<br>Festive</div></div>
+      </div>
+
+      <p class="body">A night of dhol beats, choreographies practiced till midnight, and Bollywood numbers that demand the floor. Then, as the music softens, two rings will write a forever. <em>Bring your dancing shoes — this floor is ours.</em></p>
+
+      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Ram+Bhawan+Janta+Bhawan+Road+Sirsa+Haryana+125055" target="_blank" rel="noopener">
+        <span>View on Map</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== EVENT 2: HALDI (SUNSHINE) ========== -->
+<section class="event-full theme-haldi" id="haldi">
+  <div class="event-bg-decor" aria-hidden="true">
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <!-- Marigold petal float -->
+    <div class="marigold-float" id="marigoldFloat"></div>
+  </div>
+
+  <div class="event-grid reverse container">
+    <div class="event-art reveal">
+      <div class="art-stack">
+        <div class="art-back-shape"></div>
+
+        <!-- Main photo with haldi-yellow treatment -->
+        <div class="art-frame art-haldi">
+          <img src="photos/p4.jpeg" alt="Namisha &amp; Yashutosh — Haldi portrait" />
+          <div class="art-overlay-haldi"></div>
+          <div class="art-overlay-sunbeam"></div>
+          <div class="art-overlay-grain"></div>
+        </div>
+
+        <!-- SVG marigold decorations -->
+        <svg class="art-deco-svg art-deco-tl" viewBox="0 0 100 100" aria-hidden="true">
+          <g>
+            <circle cx="50" cy="50" r="22" fill="#d99b2b" opacity=".3"/>
+            <circle cx="50" cy="50" r="16" fill="#fde8a8"/>
+            <circle cx="50" cy="50" r="10" fill="#d99b2b"/>
+            <circle cx="50" cy="50" r="4" fill="#a8731a"/>
+          </g>
+        </svg>
+        <svg class="art-deco-svg art-deco-br" viewBox="0 0 100 100" aria-hidden="true">
+          <g fill="#a8731a" opacity=".8">
+            <path d="M50 10 Q60 30 50 50 Q40 30 50 10Z"/>
+            <path d="M50 50 Q70 60 90 50 Q70 40 50 50Z"/>
+            <path d="M50 50 Q60 70 50 90 Q40 70 50 50Z"/>
+            <path d="M10 50 Q30 60 50 50 Q30 40 10 50Z"/>
+          </g>
+        </svg>
+
+        <div class="art-label art-label-haldi">
+          <div class="art-label-num">02</div>
+          <div class="art-label-text">Haldi<br><span>Sunshine</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="event-info reveal">
+      <div class="event-day">Day Two · 25 November 2026</div>
+      <h2 class="display">Haldi <br><em class="play-italic">Ceremony</em></h2>
+      <p class="tagline">A morning painted in turmeric, sunshine, and the love of those we hold dearest.</p>
+
+      <div class="event-meta-row">
+        <div class="cell"><div class="k">Time</div><div class="v">12:00 PM<br>Noon</div></div>
+        <div class="cell"><div class="k">Venue</div><div class="v">Ram Bhawan,<br>Sirsa</div></div>
+        <div class="cell"><div class="k">Dress Code</div><div class="v">Yellow &amp;<br>Sunshine</div></div>
+      </div>
+
+      <p class="body">An age-old ritual where turmeric meets skin and blessings meet hearts. The colour of warmth, of new beginnings, smeared on us by the hands of family and laughter that fills the courtyard. <em>Come ready to glow.</em></p>
+
+      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Ram+Bhawan+Janta+Bhawan+Road+Sirsa+Haryana+125055" target="_blank" rel="noopener">
+        <span>View on Map</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== EVENT 3: WEDDING (ROYAL) ========== -->
+<section class="event-full theme-wedding" id="wedding">
+  <div class="event-bg-decor" aria-hidden="true">
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="rose-petals" id="rosePetals"></div>
+    <div class="firefly-stars" id="fireflyStars"></div>
+  </div>
+
+  <div class="event-grid container">
+    <div class="event-art reveal">
+      <div class="art-stack">
+        <div class="art-back-shape"></div>
+
+        <!-- Wedding photo with royal cinematic treatment -->
+        <div class="art-frame art-wedding">
+          <img src="photos/p2.jpeg" alt="Namisha &amp; Yashutosh — Wedding portrait" />
+          <div class="art-overlay-wedding"></div>
+          <div class="art-overlay-mandap"></div>
+          <div class="art-overlay-grain"></div>
+        </div>
+
+        <!-- Mandap arch SVG decoration -->
+        <svg class="art-deco-svg art-deco-tr" viewBox="0 0 100 100" aria-hidden="true">
+          <g stroke="#c9a35b" stroke-width="1" fill="none">
+            <path d="M20 50 Q50 20 80 50" stroke-width="1.5"/>
+            <path d="M25 50 Q50 25 75 50" opacity=".7"/>
+            <circle cx="20" cy="50" r="2" fill="#c9a35b"/>
+            <circle cx="80" cy="50" r="2" fill="#c9a35b"/>
+            <circle cx="50" cy="20" r="3" fill="#c9a35b"/>
+            <circle cx="50" cy="30" r="1.5" fill="#c9a35b"/>
+          </g>
+        </svg>
+        <svg class="art-deco-svg art-deco-bl" viewBox="0 0 100 100" aria-hidden="true">
+          <g fill="#9c2d2b" opacity=".7">
+            <path d="M50 25 Q55 35 65 35 Q60 45 65 55 Q55 55 50 65 Q45 55 35 55 Q40 45 35 35 Q45 35 50 25 Z"/>
+          </g>
+        </svg>
+
+        <div class="art-label art-label-wedding">
+          <div class="art-label-num">03</div>
+          <div class="art-label-text">Wedding<br><span>Forever</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="event-info reveal">
+      <div class="event-day">Day Two · 25 November 2026</div>
+      <h2 class="display">The Wedding <br><em class="play-italic">Ceremony</em></h2>
+      <p class="tagline">Seven vows. Seven steps. One forever — under a sky full of stars.</p>
+
+      <div class="event-meta-row">
+        <div class="cell"><div class="k">Time</div><div class="v">9:00 PM<br>Onwards</div></div>
+        <div class="cell"><div class="k">Venue</div><div class="v">Siya Resorts,<br>Sirsa</div></div>
+        <div class="cell"><div class="k">Dress Code</div><div class="v">Traditional<br>Finery</div></div>
+      </div>
+
+      <p class="body">As the night unfolds, two families become one, and two souls take seven sacred steps around the fire. Stay for the feast, the laughter, the stolen glances — and the moment <em>everything begins</em>.</p>
+
+      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Siya+Resorts+Sirsa+Haryana" target="_blank" rel="noopener">
+        <span>View on Map</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== QUOTE INTERLUDE ========== -->
+<section class="quote-interlude reveal">
+  <div class="container">
+    <div class="quote-deco">
+      <span class="line"></span>
+      <svg width="20" height="20" viewBox="0 0 32 32" fill="currentColor"><path d="M16 4 L18 14 L28 16 L18 18 L16 28 L14 18 L4 16 L14 14 Z"/></svg>
+      <span class="line"></span>
+    </div>
+    <p class="script-quote">"And in her smile, I see <br>something more beautiful than the stars."</p>
+    <div class="quote-attr">— A Promise, A Forever</div>
+  </div>
+</section>
+
+<!-- ========== GALLERY ========== -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" style="--accent-deep:#8a6f3f">Captured moments</div>
+      <h2 class="display shimmer-text">Our Memories</h2>
+      <div class="divider" style="--accent:#8a6f3f">
+        <span class="line"></span>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21 C12 21 4 16 4 9 C4 6 6 4 9 4 C10 4 11 5 12 6 C13 5 14 4 15 4 C18 4 20 6 20 9 C20 16 12 21 12 21 Z"/></svg>
+        <span class="line"></span>
+      </div>
+      <p class="desc">A few of our favourites — and many more to come, with you in the frame.</p>
+    </div>
+
+    <div class="gallery-grid reveal">
+      <div class="photo-tile tile-1"><img src="photos/p3.jpeg" alt="Sunset beach memory"><div class="tile-overlay"><span>Sunset Together</span></div></div>
+      <div class="photo-tile tile-2"><img src="photos/p1.jpeg" alt="Pink kurtas in bloom"><div class="tile-overlay"><span>Bloom in Pink</span></div></div>
+      <div class="photo-tile tile-3"><img src="photos/p4.jpeg" alt="Candid sunshine moment"><div class="tile-overlay"><span>Sunshine Days</span></div></div>
+      <div class="photo-tile tile-4"><img src="photos/p2.jpeg" alt="Elegant evening"><div class="tile-overlay"><span>Evening Elegance</span></div></div>
+      <div class="photo-tile tile-5"><img src="photos/p3.jpeg" alt="Beach laughter"><div class="tile-overlay"><span>Salt &amp; Laughter</span></div></div>
+      <div class="photo-tile tile-6"><img src="photos/p1.jpeg" alt="Spring blooms"><div class="tile-overlay"><span>Petals &amp; Pink</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== RSVP ========== -->
+<section class="rsvp-section" id="rsvp">
+  <div class="rsvp-bg-decor" aria-hidden="true">
+    <div class="glow rsvp-glow-1"></div>
+    <div class="glow rsvp-glow-2"></div>
+  </div>
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" style="--accent-deep:#8a6f3f">Will you join us?</div>
+      <h2 class="display shimmer-text">RSVP</h2>
+      <div class="divider" style="--accent:#8a6f3f">
+        <span class="line"></span>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21 C12 21 4 16 4 9 C4 6 6 4 9 4 C10 4 11 5 12 6 C13 5 14 4 15 4 C18 4 20 6 20 9 C20 16 12 21 12 21 Z"/></svg>
+        <span class="line"></span>
+      </div>
+      <p class="desc">Kindly respond by 15 November 2026 — your presence is the best gift.</p>
+    </div>
+
+    <div class="rsvp-card reveal">
+      <span class="corner-deco tl"></span>
+      <span class="corner-deco tr"></span>
+      <span class="corner-deco bl"></span>
+      <span class="corner-deco br"></span>
+
+      <div id="rsvpForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Your name" required>
+
+        <label for="guests">Number of Guests</label>
+        <select id="guests">
+          <option>1 — Just me</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5+</option>
+        </select>
+
+        <label for="attend">Will you attend?</label>
+        <select id="attend">
+          <option value="yes">Yes, with all my heart</option>
+          <option value="some">Some events only</option>
+          <option value="no">Sadly cannot make it</option>
+        </select>
+
+        <label for="msg">A note for us (optional)</label>
+        <textarea id="msg" placeholder="Send us your wishes..."></textarea>
+
+        <div class="rsvp-buttons">
+          <button class="rsvp-submit" type="button" onclick="handleRsvp()">
+            <span>Send RSVP</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <a class="whatsapp-btn" id="whatsappBtn" href="#" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.413c-.003 6.557-5.337 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+        <div class="rsvp-status" id="rsvpStatus"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACT ========== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" style="--accent-deep:#8a6f3f">For any queries</div>
+      <h2 class="display shimmer-text">Reach Our Families</h2>
+      <div class="divider" style="--accent:#8a6f3f">
+        <span class="line"></span>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21 C12 21 4 16 4 9 C4 6 6 4 9 4 C10 4 11 5 12 6 C13 5 14 4 15 4 C18 4 20 6 20 9 C20 16 12 21 12 21 Z"/></svg>
+        <span class="line"></span>
+      </div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <div class="role">Bride's Family</div>
+        <h4>The Goyal Family</h4>
+        <p>Mr. &amp; Mrs. Goyal<br>(Parents of Namisha)</p>
+        <a href="tel:+910000000000">📞 +91 00000 00000</a>
+      </div>
+      <div class="contact-card reveal">
+        <div class="role">Groom's Family</div>
+        <h4>The Bansal Family</h4>
+        <p>Mr. &amp; Mrs. Bansal<br>(Parents of Yashutosh)</p>
+        <a href="tel:+910000000000">📞 +91 00000 00000</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="footer-decor">
+    <span class="line"></span>
+    <svg width="22" height="22" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1">
+      <path d="M16 4 L18 14 L28 16 L18 18 L16 28 L14 18 L4 16 L14 14 Z"/>
+    </svg>
+    <span class="line"></span>
+  </div>
+  <h3>We can't wait to celebrate with you</h3>
+  <p>With love and gratitude,</p>
+  <div class="signature">Namisha <span class="amp">&amp;</span> Yashutosh</div>
+  <div class="footer-small">Sirsa · 24 &amp; 25 November 2026</div>
+</footer>
+
+<!-- Hidden audio element for sound toggle (using a calm royalty-free Indian instrumental loop placeholder) -->
+<audio id="bgMusic" loop preload="none">
+  <!-- Replace this URL with your preferred royalty-free instrumental track -->
+  <source src="" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
